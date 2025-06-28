@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+      color: #232f3e;
+    }
+    .header p {
+      margin: 0;
+      color: #666;
+      font-size: 12px;
+    }
+    .setting-group {
+      margin-bottom: 20px;
+    }
+    .setting-label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #232f3e;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: #f7f7f7;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .toggle-info {
+      flex: 1;
+    }
+    .toggle-title {
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: #232f3e;
+    }
+    .toggle-description {
+      font-size: 12px;
+      color: #666;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background: #ccc;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-switch.active {
+      background: #007185;
+    }
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .toggle-switch.active .toggle-slider {
+      transform: translateX(20px);
+    }
+    .preview {
+      margin-top: 16px;
+      padding: 12px;
+      background: #e7f3ff;
+      border-radius: 6px;
+      border-left: 3px solid #007185;
+    }
+    .preview-title {
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: #232f3e;
+    }
+    .preview-text {
+      font-size: 12px;
+      color: #666;
+    }
+    .status {
+      text-align: center;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 16px;
+      font-size: 12px;
+    }
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔍 Cypher Brand Decoder</h1>
+    <p>Configure display preferences</p>
+  </div>
+  
+  <div class="setting-group">
+    <div class="setting-label">Display Location</div>
+    <div class="toggle-container">
+      <div class="toggle-info">
+        <div class="toggle-title">Product Details Area</div>
+        <div class="toggle-description">Show in left column with product info</div>
+      </div>
+      <div class="toggle-switch" id="layoutToggle">
+        <div class="toggle-slider"></div>
+      </div>
+    </div>
+    
+    <div class="preview" id="preview">
+      <div class="preview-title">Current Setting:</div>
+      <div class="preview-text" id="previewText">Brand info will appear in the buy box (right side)</div>
+    </div>
+  </div>
+  
+  <div class="status success" id="status" style="display: none;">
+    Settings saved successfully!
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

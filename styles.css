@@ -1,0 +1,149 @@
+/* Amazon Brand Owner Tracker Styles */
+.brand-owner-info {
+  background-color: #e8f4f8;
+  border:rgb(0, 51, 140);
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 12px 16px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/*
+.brand-owner-info {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+*/
+
+/* .brand-owner-info:hover {
+  background: #f0f0f0;
+  border-color: #007185;
+} */
+
+.brand-owner-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-owner-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.brand-owner-text {
+  font-size: 14px;
+  color: #232f3e;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.brand-owner-info.loading {
+  opacity: 0.7;
+}
+
+.brand-owner-info.loading .brand-owner-text {
+  color: #666;
+}
+
+/* 
+
+.brand-owner-info {
+  background-color: #e8f4f8;
+  border: 1px solid #007eb9;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 12px 16px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.brand-owner-info.loading {
+  background-color: #f0f8ff;
+  border-color: #87ceeb;
+}
+
+/* Error state styling */
+.brand-owner-info:has(.brand-owner-icon:contains("❓")) {
+  background-color: #fff8e1;
+  border-color: #ffa726;
+}
+
+.brand-owner-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-owner-icon {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.loading .brand-owner-icon {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.brand-owner-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0F1111;
+  line-height: 1.4;
+}
+
+.loading .brand-owner-text {
+  color: #666;
+  font-style: italic;
+}
+
+/* Error message styling */
+.brand-owner-text:contains("No brand or publisher information found"),
+.brand-owner-text:contains("publisher information not found"),
+.brand-owner-text:contains("Unable to determine") {
+  color: #e47911;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brand-owner-info {
+    margin: 8px 0;
+    padding: 10px 12px;
+  }
+  
+  .brand-owner-text {
+    font-size: 13px;
+  }
+}
+
+/* Integration with Amazon's buy box styling */
+#buybox .brand-owner-info,
+#rightCol .brand-owner-info {
+  margin-bottom: 16px;
+}
+
+/* Ensure it stands out but doesn't clash with Amazon's design */
+/* .brand-owner-info:hover {
+  background-color: #d4e9f1;
+  transition: background-color 0.2s ease;
+} */
+
+/* .brand-owner-info.loading:hover {
+  background-color: #e6f3ff;
+} */ */
