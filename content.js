@@ -53,7 +53,7 @@ class AmazonBrandTracker {
         // If this is found directly on the page we are done and can update the UI component.
         console.log('Starting manufacturer info extraction...');
         const manufacturerInfo = this.pageParser.extractManufacturerInfo();
-        if (manufacturerInfo != null) {
+        if (manufacturerInfo != null && manufacturerInfo.manufacturer !== 'information...' ) {
             console.log('Found manufacturer info directly from page:', manufacturerInfo);
             setTimeout(() => {
                 this.displayElementManager.updateDisplayElement(manufacturerInfo, null);
@@ -74,6 +74,8 @@ class AmazonBrandTracker {
           }, 500);
           return;
         }
+
+        
         
         // If the brand is not listed this could be a book page.
         // Book pages will have their own category specific text on the UI component.
@@ -93,9 +95,12 @@ class AmazonBrandTracker {
         // match the brand with the company that owns it.
         console.log('Processing regular product page...');
         const ownerInfo = await this.networkManager.fetchBrandOwner(brandInfo);
-
+        console.log(`ownerInfo: ${ownerInfo}`);
+        console.log(`brand_name: ${ownerInfo.brand_name}`);
+        console.log(`owning_company_name: ${ownerInfo.owning_company_name}`);
+        
         // Update the UI compmenet with the newtork fetching company owner information.
-        this.displayElementFactory.updateDisplayElement(brandInfo, ownerInfo);
+        this.displayElementManager.updateDisplayElement(brandInfo, ownerInfo);
     }
 
 }
