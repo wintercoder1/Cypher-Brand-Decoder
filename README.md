@@ -12,4 +12,6 @@ Well now you can have all that!
 
 ![name](https://github.com/wintercoder1/Cypher-Brand-Decoder/blob/main/images/screenshots/sensodyne_by_haleon.png)
 
-![name](https://github.com/wintercoder1/Cypher-Brand-Decoder/blob/main/images/screenshots/sensodyne_by_haleon.png)
+
+![name](https://github.com/wintercoder1/Cypher-Brand-Decoder/blob/main/images/screenshots/silk_by_whitewave.png)
+
